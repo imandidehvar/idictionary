@@ -1,15 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<navbar></navbar>
+<text-input @translate="translate"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from './components/Navbar.vue'
+import TextInput from './components/TextInput.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Navbar,
+    TextInput,
+  },
+  methods: {
+    translate(text) {
+      alert(text)
+    }
   }
 }
 </script>
@@ -21,6 +28,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+
+@import'~bootstrap/dist/css/bootstrap.css'
 </style>
